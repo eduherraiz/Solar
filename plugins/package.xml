@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.8.0" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>isicsWidgetFormTinyMCEPlugin</name>
+ <channel>pear.symfony-project.com</channel>
+ <summary>The missing TinyMCE widget for sfForm.</summary>
+ <description>This plugin adds a fully customizable TinyMCE widget.</description>
+ <lead>
+  <name>ISICS.fr</name>
+  <user>nicolas.charlot</user>
+  <email>contact@isics.fr</email>
+  <active>yes</active>
+ </lead>
+ <date>2010-06-28</date>
+ <time>17:47:56</time>
+ <version>
+  <release>1.0.5</release>
+  <api>1.0.5</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license>MIT</license>
+ <notes>
+-
+ </notes>
+ <contents>
+  <dir name="/">
+   <file md5sum="a3080e6daf19adcc73f4fb8cd818db27" name="lib/widget/isicsWidgetFormTinyMCE.class.php" role="data"/>
+   <file md5sum="ebbb7aa828d219549d166c90839925ef" name="LICENSE" role="data"/>
+   <file md5sum="f197c59ba129ae0a96676459183c6eea" name="README" role="data"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.1.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.1</min>
+   </pearinstaller>
+   
+  </required>
+ </dependencies>
+ <phprelease/>
+ <changelog>
+  <release>
+   <version>
+    <release>1.0.5</release>
+    <api>1.0.5</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2010-06-28</date>
+   <license>MIT</license>
+   <notes>
+* Updated package.xml for symfony 1.4
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.4</release>
+    <api>1.0.4</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2009-03-16</date>
+   <license>MIT</license>
+   <notes>
+* Updated PEAR channel.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.3</release>
+    <api>1.0.3</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2009-03-16</date>
+   <license>MIT</license>
+   <notes>
+* Added GZip compression support.
+* Added options without quotes protection support.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.2</release>
+    <api>1.0.2</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2008-10-08</date>
+   <license>MIT</license>
+   <notes>
+fixed wrong parameter name
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.1</release>
+    <api>1.0.1</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2008-10-06</date>
+   <license>MIT</license>
+   <notes>
+Updated README
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.0</release>
+    <api>1.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2008-10-06</date>
+   <license>MIT</license>
+   <notes>
+Initial public release
+   </notes>
+  </release>
+ </changelog>
+</package>

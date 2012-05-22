@@ -1,0 +1,5 @@
+imageSuccess:
+  http_metas:
+    content-type: image/jpeg
+  has_layout: off
+

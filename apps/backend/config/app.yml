@@ -1,0 +1,61 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+# default values
+# root directory name (used by task media:create-root)
+all:
+  lyMediaManager:
+    media_root: media
+    # thumbnails settings
+    thumbnails:
+    mini:
+    width: 32
+    height: 32
+    # forces thumbnail size to fixed width/height values
+    shave: true
+    small:
+    width: 100
+    height: 100
+    shave: true
+    medium:
+    width: 300
+    height: 300
+    big:
+    width: 640
+    height: 480
+    # name of folder where thumbnails will be created
+    thumbnail_folder: thumbs
+    # thumbnails will be created only for these mime-types
+    create_thumbnails_for: [image/jpeg,image/png,image/gif]
+    # only files with these extensions can be uploaded
+    allowed_extensions: [jpg,png,gif,txt,pdf,doc,docx,ppt,pptx,exe,xls,xlsx,qt,mov,mpv2,mp2v,avi,mpg,mpeg,tex,latex,zip,ma,pe,jpeg]
+    # only files of these mime-types can be uploaded
+    mime_types: [image/jpeg,image/png,image/gif,text/plain,video/mpeg,video/mpeg-2,video/quicktime,application/x-tex,application/x-latex,application/pdf,application/msword,application/mspowerpoint,application/zip,application/vnd.ms-powerpoint,application/ms-powerpoint,application/mathematica ]
+    # libray used for thumbnail creation: true ImageMagick, false (default) GD
+    use_ImageMagick: false
+
+
+  sfAssetsLibrary:
+    upload_dir:  media
+    check_type:       false              # Set to true if you want to restrict the type of assets
+    types:                               # Accepted asset types if check_type is true
+      image:   image
+      txt:     txt
+      archive: archive
+      pdf:     pdf
+      xls:     xls
+      doc:     doc
+      ppt:     ppt
+      pdf:     pdf
+    thumbnail_dir:    thumbnail          # Where the image thumbnails are stored
+    use_ImageMagick:  true               # Set to true if you have the convert command
+    thumbnails:                          # Name and size (in pixels) of the thumbnails created at upload
+      small:                             # Displayed in the list page
+        width: 84
+        height: 84
+        shave: true                      # Cut strips to constraint the image size
+      large:                             # Displayed in the details page
+        width: 194
+        height: 152
+    search_pager_size: 20                # Number of resuts per page
+    mass_upload_size:  5                 # Number of file upload controls displayed in the mass upload form

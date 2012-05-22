@@ -1,0 +1,77 @@
+10
+
+dir
+55
+http://svn.github.com/odracci/sfDoctrineAssetsLibraryPlugin.git/test
+http://svn.github.com/odracci/sfDoctrineAssetsLibraryPlugin.git
+
+
+
+2010-12-05T07:58:50.000000Z
+55
+odracci
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+61c9853e-0e95-7d1b-8cfb-ce57b7db7bff
+
+unit
+dir
+
+prove.php
+file
+
+
+
+
+2011-06-21T21:37:46.734351Z
+485b5fd8604e11e56c6e57d1de72b350
+2010-12-05T07:58:50.000000Z
+55
+odracci
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1138
+
+assets
+dir
+
+functional
+dir
+
+data
+dir
+
+bootstrap
+dir
+

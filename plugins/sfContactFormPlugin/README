@@ -1,0 +1,81 @@
+sfContactFormPlugin
+===================
+
+The plugin is simple and usual to websites.
+
+I use some plugins in symfony and I know how those plugins accelerate the proccess developing a website. This is my first plugin. So I tried to do something easy and usual.
+
+To use the plugin you need install the Swift Mailer library at <a href="http://swiftmailer.org/">http://swiftmailer.org</a> . After downloaded the Swift package, you must extract it in lib/vendor folder of your project.
+Insallation:
+
+install the plugin:
+-------------------
+
+    $ php symfony plugin:install --stability=beta sfContactFormPlugin
+
+enable the plugin in project_name/config/ProjectConfiguration.class.php
+
+    $this->enablePlugins('sfContactFormPlugin');
+
+enable the plugin module in your project app like this frontend/config/settings.yml
+
+    all:
+      .settings:
+      enabled_modules:        [contact]
+
+make the rout of contact in your project app in this way frontend/config/routing.yml
+
+    contact:
+      url:  /contact
+      param: { module: contact, action: index }
+
+configure the addressee and messages in your project app in this way frontend/config/app.yml
+
+    all:
+      contact_form:
+        ## Put here your email address. This email will receive the message from contact form
+        email:         your_email@server.com         
+
+        ## custom your error message            
+        error:        There is an error. Cannot be sent!  
+
+        ## custom your success message
+        notice:       Your message has been sent succefull 
+
+        ## captcha error message
+        captcha:      Your secret code is incorrect
+
+        ## put here the absolute image path
+        ## example: http://localhost/yourproject/web/index.php/contact/image
+        image_path:   http://localhost/yourproject/web/index.php/contact/image
+
+        ## legend your form
+        legend:       Please, fill the fields and send us a message  
+
+        ## change fields labels
+        field_name:     Your Name
+        field_email:    Your Email
+        field_subject:  Your Subject
+        field_message:  Your Message
+        field_captcha:  Security Code
+        button:         Send Message
+
+clear the cache
+
+    $ php symfony cc
+
+publishing the plugin
+
+    $ php symfony plugin:publish-assets
+
+Usage:
+-----
+
+    http://localhost/your_project/web/index.php/contact
+
+To do:
+-----
+
+You can open the contact module of plugin and customize it as you need.
+
+ - There isn't implemented the multi dispatch

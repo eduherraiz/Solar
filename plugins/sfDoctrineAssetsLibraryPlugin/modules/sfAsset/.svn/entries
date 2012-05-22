@@ -1,0 +1,43 @@
+10
+
+dir
+55
+http://svn.github.com/odracci/sfDoctrineAssetsLibraryPlugin.git/modules/sfAsset
+http://svn.github.com/odracci/sfDoctrineAssetsLibraryPlugin.git
+
+
+
+2010-12-05T07:58:50.000000Z
+55
+odracci
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+61c9853e-0e95-7d1b-8cfb-ce57b7db7bff
+
+i18n
+dir
+
+actions
+dir
+
+config
+dir
+
+lib
+dir
+
+templates
+dir
+

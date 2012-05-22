@@ -1,0 +1,34 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+# default values
+#all:
+
+all:
+  contact_form:
+    ## Put here your email address. This email will receive the message from contact form
+    email:         edu17@telefonica.net         
+ 
+    ## custom your error message            
+    error:        There is an error. Cannot be sent!  
+ 
+    ## custom your success message
+    notice:       Your message has been sent successfuly
+ 
+    ## captcha error message
+    captcha:      Your secret code is incorrect.
+ 
+    ## put here the absolute image path
+    ## example: http://localhost/yourproject/web/index.php/contact/image
+    image_path:   http://dfs.uib.es/contact/image
+ 
+    ## legend your form
+    legend:       Please, fill the fields and send us a message  
+ 
+    ## change fields labels
+    field_name:     Your Name
+    field_email:    Your Email
+    field_subject:  Your Subject
+    field_message:  Your Message
+    field_captcha:  Security Code
+    button:         Send Message

@@ -1,0 +1,46 @@
+# Symfony Jquery Tree Doctrine Manager Plugin based on JsTree #
+
+## Whats new ##
+V 1.2.4 : add a right click contextual menu that add a link to the edit form for the node
+
+
+## Installation ##
+You must enable the module for the nested set manager in your application settings.yml
+
+    [yaml]
+    all:
+      .settings:
+      enabled_modules:        [default, sfJqueryTreeDoctrineManager]
+
+
+## Usage ##
+    [php]
+    <?php
+    // Need to use the helper
+    use_helper("sfJqueryTreeDoctrine");
+    echo get_nested_set_manager("Category", "name");
+
+
+## Options ##
+In order to remove the context menu, you can add in app.yml
+
+    [yaml]
+    all:
+      sfJqueryTree:
+        withContextMenu : false
+
+## Screenshots ##
+Below a screenshot of the Roots management (if hasManyRoot is set to true)
+
+![root manager](http://www.negko.com/symfony/sfJqueryTreeDoctrineManagerPlugin/roots_manager.jpg "Root Manager Screenshot")
+
+
+And a screenshot of tree Manager.
+
+![root manager](http://www.negko.com/symfony/sfJqueryTreeDoctrineManagerPlugin/tree_manager.jpg "Root Manager Screenshot")
+
+You can drag and drop node, or double click on a node to edit
+
+## Creditential ##
+
+This plugin is inspired by [sfDoctrineNestedSetManagerPlugin](http://www.symfony-project.org/plugins/sfDoctrineNestedSetManagerPlugin "sfDoctrineNestedSetManagerPlugin")

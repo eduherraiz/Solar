@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/odracci/sfDoctrineAssetsLibraryPlugin.git/!svn/ver/55/lib/form
+END
+sfWidgetFormSchemaFormatterAsset.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/odracci/sfDoctrineAssetsLibraryPlugin.git/!svn/ver/55/lib/form/sfWidgetFormSchemaFormatterAsset.class.php
+END
+sfAssetReplaceForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/odracci/sfDoctrineAssetsLibraryPlugin.git/!svn/ver/55/lib/form/sfAssetReplaceForm.class.php
+END
+sfWidgetFormSchemaFormatterAssets.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/odracci/sfDoctrineAssetsLibraryPlugin.git/!svn/ver/55/lib/form/sfWidgetFormSchemaFormatterAssets.class.php
+END
+sfAssetFolderMoveForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/odracci/sfDoctrineAssetsLibraryPlugin.git/!svn/ver/55/lib/form/sfAssetFolderMoveForm.class.php
+END
+sfAssetsForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/odracci/sfDoctrineAssetsLibraryPlugin.git/!svn/ver/55/lib/form/sfAssetsForm.class.php
+END
+sfAssetFolderRenameForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/odracci/sfDoctrineAssetsLibraryPlugin.git/!svn/ver/55/lib/form/sfAssetFolderRenameForm.class.php
+END
+sfAssetMoveForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/odracci/sfDoctrineAssetsLibraryPlugin.git/!svn/ver/55/lib/form/sfAssetMoveForm.class.php
+END
+sfAssetRenameForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/odracci/sfDoctrineAssetsLibraryPlugin.git/!svn/ver/55/lib/form/sfAssetRenameForm.class.php
+END

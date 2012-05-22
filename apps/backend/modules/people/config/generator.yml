@@ -1,0 +1,38 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           SolarPeople
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          solar_people
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        visible: { help: The person can be visible in the web or not }
+        publication_sign: { help: "Use the webpage to get your publications and copy the URL of the result here. (http://adsabs.harvard.edu/abstract_service.html)" }
+        name_web: {help: "If this field is not blank, it appears in the web instead of the combination name + surname."}
+        photo: { help: The image will be resized automatically. Don't worry about it. }
+#        category_id: {title: <a href="http://google.es">Cat</a>}
+ 
+      list:
+        title: People Management
+        display: [=name, =surname, _photo, _publications]
+        batch_actions: 
+          _delete: ~
+          delete_publications: ~
+        object_actions:
+          _edit:      ~
+          _delete:    ~
+          delete_publications: ~
+      filter:
+        class: false
+      form:    ~
+      edit:    ~
+      new:     ~
+

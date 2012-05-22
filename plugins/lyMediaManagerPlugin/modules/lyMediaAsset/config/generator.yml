@@ -1,0 +1,36 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           lyMediaAsset
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          ly_media_asset
+    with_doctrine_route:   true
+
+    config:
+      list:
+        fields:
+          td_image: {label: false}
+          created_at: {label: Date, date_format: dd MMM yyy HH:mm}
+        table_method: retrieveAssetList
+        title: Media Manager
+        display: [_td_image,filename,title,created_at]
+        object_actions:
+          _edit: ~
+          _delete: ~
+          download: {action: download}
+        actions:
+          _new: ~
+        batch_actions:
+          delete: ~
+          generatethumbnails: {label: 'Generate thumbnails'}
+      form: ~
+      edit:
+        display:
+          "NONE": [_field_path, folder_id, filename, <?php echo (sfConfig::get('app_lyMediaManager_use_i18n', false) ? implode(', ', array_keys(sfConfig::get('app_lyMediaManager_i18n_cultures', array()))) : 'title,description') ?>,author, copyright]
+          "Asset": [_field_image]
+      new:
+        title: New media

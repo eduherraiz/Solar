@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/odracci/sfDoctrineAssetsLibraryPlugin.git/!svn/ver/55/lib/task
+END
+sfAssetSynchronizeTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/odracci/sfDoctrineAssetsLibraryPlugin.git/!svn/ver/55/lib/task/sfAssetSynchronizeTask.class.php
+END
+sfAssetCreateRootTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/odracci/sfDoctrineAssetsLibraryPlugin.git/!svn/ver/55/lib/task/sfAssetCreateRootTask.class.php
+END

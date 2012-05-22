@@ -1,0 +1,23 @@
+#notice{
+  width:100%;
+  padding: 5px;
+  background: #009900;
+  color:#fff;
+  text-align:center;
+}
+#error{
+  width:100%;
+  padding: 5px;
+  background: #ff0000;
+  color:#fff;
+  text-align:center;
+}
+fieldset{
+  width:500px;
+}
+#contact_captcha, #contact_name, #contact_email, #contact_subject, #contact_message{
+  width:300px;
+  padding:2px;
+  border:1px solid #666;
+
+}

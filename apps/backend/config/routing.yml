@@ -1,0 +1,97 @@
+solar_new:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                SolarNew
+    module:               new
+    prefix_path:          /new
+    column:               id
+    with_wildcard_routes: true
+
+solar_index:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                SolarIndex
+    module:               index
+    prefix_path:          /index
+    column:               id
+    with_wildcard_routes: true
+
+solar_page_solar:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                SolarPage
+    module:               solar
+    prefix_path:          /solar
+    column:               id
+    with_wildcard_routes: true
+
+solar_page_solarpage:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                SolarPage
+    module:               solarpage
+    prefix_path:          /solarpage
+    column:               id
+    with_wildcard_routes: true
+
+solar_page:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                SolarPage
+    module:               page
+    prefix_path:          /page
+    column:               id
+    with_wildcard_routes: true
+
+solar_publication:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                SolarPublication
+    module:               publication
+    prefix_path:          /publication
+    column:               id
+    with_wildcard_routes: true
+
+solar_category:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                SolarCategory
+    module:               category
+    prefix_path:          /category
+    column:               id
+    with_wildcard_routes: true
+
+solar_researchline:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                SolarResearchline
+    module:               researchline
+    prefix_path:          /researchline
+    column:               id
+    with_wildcard_routes: true
+
+solar_people:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                SolarPeople
+    module:               people
+    prefix_path:          /people
+    column:               id
+    with_wildcard_routes: true
+
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: people, action: index }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

@@ -1,0 +1,23 @@
+##GENERAL
+php symfony doctrine:build --all --no-confirmation --and-load
+php symfony plugin:publish-assets
+php symfony cc
+
+##USERS
+php symfony guard:create-user yo@eduherraiz.com edu password
+php symfony guard:promote edu
+
+
+##ASSETS
+php symfony asset:create-root
+Importing assets from an existing library
+
+Whether you want to add assets to your library from an existing sfMediaLibrary, or to cleanup your database of removed files, you will probably need to synchronize the assets database with a directory.
+
+Fortunately, the plugin comes with a task asset:synchronize to do just that:
+
+php symfony asset:synchronize [app] [dirname] --notVerbose --removeOrphanAssets --removeOrphanFolders
+
+For instance, to import an existing Media Library under web/uploads/media to the sfAssetsLibrary, just type:
+
+php symfony asset:synchronize backend /path/to/project/web/uploads/media --removeOrphanAssets --removeOrphanFolders

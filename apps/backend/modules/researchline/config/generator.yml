@@ -1,0 +1,25 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           SolarResearchline
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          solar_researchline
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        image: { help: The image will be resized automatically. Don't worry about it. }
+      list:
+        title: Research Lines Management
+        display: [=title]
+      filter:
+        class: false
+      form:    ~
+      edit:    ~
+      new:     ~

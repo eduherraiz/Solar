@@ -1,0 +1,117 @@
+# config/doctrine/schema.yml
+---
+SolarCategory:
+  columns:
+    name: { type: string }
+    
+SolarPeople:
+  actAs: { Timestampable: ~ }
+  columns:
+    treatment:      { type: string(255), notnull: true }
+    name:           { type: string(255), notnull: true }
+    surname:        { type: string(255), notnull: true }
+    workplace:      { type: string(255) }
+    building:       { type: string(255) }
+    phone:          { type: string(255), notnull: true }
+    fax:            { type: string(255), notnull: true }
+    sex:            { type: string(255), notnull: true }
+    nationality:    { type: string(255), notnull: true }
+    address:        { type: string }
+    email:          { type: string(255), notnull: true }
+    website:        { type: string(255) }
+    visible:        { type: boolean, notnull: true, default: 1 }
+    name_web:       { type: string(255) }
+    publication_sign: { type: string }
+    abstract:       { type: string }
+    cv_file:        { type: string, notnull: true }
+    photo:          { type: string, notnull: true }
+    category_id:    { type: integer, notnull: true }
+    
+  relations:
+    SolarResearchlines:
+      class: SolarResearchline
+      foreignAlias: SolarPeoples
+      refClass: SolarPeopleResearchline
+      local: people_id
+      foreign: researchline_id
+    SolarCategory:      { onDelete: CASCADE, local: category_id, foreign: id, foreignAlias: SolarCategorys }
+      
+ 
+SolarResearchline:
+  actAs: { Timestampable: ~ }
+  columns:
+    title:            { type: string }
+    abstract:         { type: string }
+    complete:         { type: string }
+    image:            { type: string, notnull: true }
+    image_text:       { type: string }
+    
+SolarPeopleResearchline:
+  columns:
+    people_id:          { type: integer, primary: true }
+    researchline_id:    { type: integer, primary: true }
+  relations:
+     SolarResearchline:  { onDelete: CASCADE, local: researchline_id, foreign: id, foreignAlias: SolarPeopleResearchlines }
+     SolarPeople:        { onDelete: CASCADE, local: people_id, foreign: id, foreignAlias: SolarPeopleResearchlines }
+
+SolarPublication:
+  actAs: { Timestampable: ~ }
+  columns:
+    url:           { type: string, notnull: true }
+    journal:       { type: string }
+    referencess:   { type: string }
+    article:       { type: string }
+    preprint:      { type: string }
+    title:         { type: string }
+    score:         { type: string }
+    date:          { type: string }
+    authors:       { type: string }
+    people_id:     { type: integer }
+  relations:
+   SolarPeople:      { onDelete: CASCADE, local: people_id, foreign: id, foreignAlias: SolarPublications }
+ 
+
+SolarPage:
+  actAs: { Timestampable: ~ }
+  columns:
+    title:      { type: string }
+    password:   { type: string }
+    text_page:  { type: string }
+    is_onmenu:  { type: boolean, default: 0}
+    menu_title: { type: string }
+    
+SolarNew:
+  actAs: { Timestampable: ~ }
+  columns:
+    title:      { type: string }
+    text_page:  { type: string }
+
+SolarIndex:
+  actAs: { Timestampable: ~ }
+  columns:
+    text_page:  { type: string }
+  
+    
+    
+# JobeetAffiliate:
+#   actAs: { Timestampable: ~ }
+#   columns:
+#     url:       { type: string(255), notnull: true }
+#     email:     { type: string(255), notnull: true, unique: true }
+#     token:     { type: string(255), notnull: true }
+#     is_active: { type: boolean, notnull: true, default: 0 }
+#   relations:
+#     JobeetCategories:
+#       class: JobeetCategory
+#       refClass: JobeetCategoryAffiliate
+#       local: affiliate_id
+#       foreign: category_id
+#       foreignAlias: JobeetAffiliates
+#  
+# JobeetCategoryAffiliate:
+#   columns:
+#     category_id:  { type: integer, primary: true }
+#     affiliate_id: { type: integer, primary: true }
+#   relations:
+#     JobeetCategory:  { onDelete: CASCADE, local: category_id, foreign: id }
+#     JobeetAffiliate: { onDelete: CASCADE, local: affiliate_id, foreign: id }
